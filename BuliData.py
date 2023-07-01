@@ -152,8 +152,9 @@ def graphTopScorer(df):
                      color='Goals',
                      color_continuous_scale="ylorrd",
                      text='Top Team Scorer',
-                     title='Máximo goleador por club : Bundesliga 2022 - 2023"',
-                     height=600
+                     title='Máximo goleador por club : Bundesliga 2022 - 2023',
+                     height=600,
+                     width=720
                 )
 
     st.plotly_chart(fig)
