@@ -36,8 +36,7 @@ def graphPositions(df):
                  color=df.Pts,
                  text=df.Pts,
                  color_continuous_scale="blues",
-                 height=720,
-                 width=920
+                 height=600
                 )
     st.plotly_chart(fig)
 
@@ -159,8 +158,7 @@ def graphTopScorer(df):
                      color_continuous_scale="ylorrd",
                      text='Top Team Scorer',
                      title='Máximo goleador por club : Bundesliga 2022 - 2023',
-                     height=600,
-                     width=920
+                     height=600
                 )
 
     st.plotly_chart(fig)
