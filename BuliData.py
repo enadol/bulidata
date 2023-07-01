@@ -166,7 +166,7 @@ if selected_plot == "Posiciones":
     graphPositions(df)
 
 elif selected_plot == "Puntos":
-    st.write("Gráfico de puntos":")
+    st.write("Gráfico de puntos:")
     graphPuntos(df)
 
 elif selected_plot == "Público":
