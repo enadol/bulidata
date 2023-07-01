@@ -11,11 +11,14 @@ import streamlit as st
 
 
 # In[3]:
-
+st.title("Visual Data Bundesliga 2022/2023")
 
 df = pd.read_csv("results2022-2023201_overall.csv")
 df.Attendance = df.Attendance.str.replace(',', '').astype(int)
 
+st.sidebar.header("Visualizations")
+plot_options = ["Posiciones", "Puntos", "Público", "Goles", "Diff. Goles", "Partidos", "xG", "Goleadores"]
+selected_plot = st.sidebar.selectbox("Choose a plot type", plot_options)
 
 # In[4]:
 def graphPositions(df):
