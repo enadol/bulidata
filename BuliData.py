@@ -9,7 +9,7 @@ import numpy as np
 import plotly.express as px
 import streamlit as st
 
-col1, col2=st.columns([0.1,0.9])
+col1, col2=st.columns([1,3])
 
 # In[3]:
 
