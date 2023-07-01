@@ -24,6 +24,7 @@ with st.sidebar:
     plot_options = ["Posiciones", "Puntos", "Público", "Goles", "Diff. Goles", "Partidos", "xG", "Goleadores"]
     selected_plot = st.selectbox("Seleccione un gráfico", plot_options)
 
+st.title("VISUAL DATA BUNDESLIGA 2022/2023")
 # In[4]:
 def graphPositions(df):
 
@@ -166,7 +167,7 @@ def graphTopScorer(df):
 
 # In[ ]:
 with st.expander("Gráfico", expanded=True):
-    st.title("VISUAL DATA BUNDESLIGA 2022/2023")
+    
     if selected_plot == "Posiciones":
         #st.write("Gráfico de posiciones:")
         graphPositions(df)
