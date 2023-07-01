@@ -13,7 +13,7 @@ import streamlit as st
 # In[3]:
 
 
-df = pd.read_csv("D:\\results2022-2023201_overall.csv")
+df = pd.read_csv("results2022-2023201_overall.csv")
 df.Attendance = df.Attendance.str.replace(',', '').astype(int)
 
 
