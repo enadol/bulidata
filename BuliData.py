@@ -9,6 +9,7 @@ import numpy as np
 import plotly.express as px
 import streamlit as st
 
+col1, col2=st.columns(2)
 
 # In[3]:
 st.title("VISUAL DATA BUNDESLIGA 2022/2023")
@@ -16,9 +17,10 @@ st.title("VISUAL DATA BUNDESLIGA 2022/2023")
 df = pd.read_csv("results2022-2023201_overall.csv")
 df.Attendance = df.Attendance.str.replace(',', '').astype(int)
 
-st.sidebar.header("Visualizations")
-plot_options = ["Posiciones", "Puntos", "Público", "Goles", "Diff. Goles", "Partidos", "xG", "Goleadores"]
-selected_plot = st.sidebar.selectbox("Seleccione un gráfico", plot_options)
+with col1:
+    st.sidebar.header("Visualizations")
+    plot_options = ["Posiciones", "Puntos", "Público", "Goles", "Diff. Goles", "Partidos", "xG", "Goleadores"]
+    selected_plot = st.sidebar.selectbox("Seleccione un gráfico", plot_options)
 
 # In[4]:
 def graphPositions(df):
@@ -161,36 +163,37 @@ def graphTopScorer(df):
 
 
 # In[ ]:
+with col2:
+    
+    if selected_plot == "Posiciones":
+        #st.write("Gráfico de posiciones:")
+        graphPositions(df)
 
-if selected_plot == "Posiciones":
-    #st.write("Gráfico de posiciones:")
-    graphPositions(df)
+    elif selected_plot == "Puntos":
+        #st.write("Gráfico de puntos:")
+        graphPuntos(df)
 
-elif selected_plot == "Puntos":
-    #st.write("Gráfico de puntos:")
-    graphPuntos(df)
+    elif selected_plot == "Público":
+       #st.write("Público en el estadio:")
+       graphStadiums(df)
 
-elif selected_plot == "Público":
-   #st.write("Público en el estadio:")
-   graphStadiums(df)
+    elif selected_plot == "Goles":
+        #st.write("Goles a favor y en contra:")
+        graphGoals(df)
 
-elif selected_plot == "Goles":
-    #st.write("Goles a favor y en contra:")
-    graphGoals(df)
+    elif selected_plot == "Diff. Goles":
+        #st.write("Diferencia de goles:")
+        goalDiff(df)
 
-elif selected_plot == "Diff. Goles":
-    #st.write("Diferencia de goles:")
-    goalDiff(df)
+    elif selected_plot == "Partidos":
+        #st.write("Partidos:")
+        graphWLD(df)
 
-elif selected_plot == "Partidos":
-    #st.write("Partidos:")
-    graphWLD(df)
+    elif selected_plot == "xG":
+        #st.write("Expected Goals:")
+        graphBubble(df)
 
-elif selected_plot == "xG":
-    #st.write("Expected Goals:")
-    graphBubble(df)
-
-else:
-    #selected_plot == "Diff. Goles":
-    #st.write("Máximo goleador:")
-    graphTopScorer(df)
+    else:
+        #selected_plot == "Diff. Goles":
+        #st.write("Máximo goleador:")
+        graphTopScorer(df)
