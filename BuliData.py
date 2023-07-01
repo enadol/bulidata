@@ -11,7 +11,7 @@ import streamlit as st
 
 
 # In[3]:
-st.title("Visual Data Bundesliga 2022/2023")
+st.title("VISUAL DATA BUNDESLIGA 2022/2023")
 
 df = pd.read_csv("results2022-2023201_overall.csv")
 df.Attendance = df.Attendance.str.replace(',', '').astype(int)
@@ -27,7 +27,7 @@ def graphPositions(df):
     fig = px.bar(df, 
                  x=df.Squad, 
                  y=df.Pts,
-                 title="Total Puntos : BL 2022 - 2023",
+                 title="Total Puntos : Bundesliga 2022 - 2023",
                  color=df.Pts,
                  text=df.Pts,
                  color_continuous_scale="blues",
