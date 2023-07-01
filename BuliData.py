@@ -166,7 +166,7 @@ def graphTopScorer(df):
 
 
 # In[ ]:
-with st.expander("Gráfico", expanded=True):
+with st.container():
     
     if selected_plot == "Posiciones":
         #st.write("Gráfico de posiciones:")
