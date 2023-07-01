@@ -18,7 +18,7 @@ df.Attendance = df.Attendance.str.replace(',', '').astype(int)
 
 st.sidebar.header("Visualizations")
 plot_options = ["Posiciones", "Puntos", "Público", "Goles", "Diff. Goles", "Partidos", "xG", "Goleadores"]
-selected_plot = st.sidebar.selectbox("Selecciones un gráfico", plot_options)
+selected_plot = st.sidebar.selectbox("Seleccione un gráfico", plot_options)
 
 # In[4]:
 def graphPositions(df):
