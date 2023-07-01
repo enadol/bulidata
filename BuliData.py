@@ -104,13 +104,13 @@ def goalDiff(df):
 
 # In[8]:
 
-def grapgWLD(df):
+def graphWLD(df):
 # Bar chart of Wins, Draws, Losses
     fig = px.bar(df, 
                  x='Squad', 
                  y=['W', 'D', 'L'], 
                  barmode='group',
-                 title='Wins, Draws, Losses : EPL 2022 - 2023',
+                 title='Ganados, empatados, perdidos : Bundesliga 2022 - 2023',
                  color_discrete_sequence=["green","gold","tomato"],
                  text_auto=True,
                  height=600
