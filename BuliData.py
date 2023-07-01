@@ -34,7 +34,7 @@ def graphPositions(df):
                  text=df.Pts,
                  color_continuous_scale="blues",
                  height=600,
-                 width=900
+                 width=50
                 )
     st.plotly_chart(fig)
 
