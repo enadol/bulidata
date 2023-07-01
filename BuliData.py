@@ -120,7 +120,7 @@ def grapgWLD(df):
 
 # In[9]:
 
-def graphBubble(df)
+def graphBubble(df):
 # Bubble chart of Expected Goals For and Against
     fig = px.scatter(df, 
                      x='xG', 
