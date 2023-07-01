@@ -163,7 +163,7 @@ def graphTopScorer(df):
 
 
 # In[ ]:
-with st.expander("Gráfico"):
+with st.expander("Gráfico", expanded=True):
     st.title("VISUAL DATA BUNDESLIGA 2022/2023")
     if selected_plot == "Posiciones":
         #st.write("Gráfico de posiciones:")
