@@ -46,7 +46,7 @@ def graphPuntos(df):
                  y=['MP', 'Pts'], 
                  barmode='group', 
                  labels={'value': 'Count'},
-                 title='Matches Played (MP) and Points (Pts) : EPL 2022 - 2023',
+                 title='Partidos jugados (MP) y Puntos (Pts) : Bundesliga 2022 - 2023',
                  text_auto=True,
                  color_discrete_sequence=["gray","deepskyblue"]
                 )
@@ -60,7 +60,7 @@ def graphStadiums(df):
     fig = px.bar(df, 
                  x=df.Squad, 
                  y=df.Attendance,
-                 title="Average Attendance : EPL 2022 - 2023",
+                 title="Público promedio en el estadio : Bundesliga 2022 - 2023",
                  text=df.Attendance,
                  color=df.Attendance,
                  color_continuous_scale="greens",
@@ -80,7 +80,7 @@ def graphGoals(df):
                  barmode='stack', 
                  text_auto=True,
                  labels={'value': 'Count'},
-                 title='Goals For, Goals Against : EPL 2022 - 2023',
+                 title='Goles a favor, Goles en contra : Bundesliga 2022 - 2023',
                  height=600
                 )
     st.plotly_chart(fig)
@@ -93,7 +93,7 @@ def goalDiff(df):
     fig = px.bar(df, 
                  x=df.Squad, 
                  y=df.GD,
-                 title="Goal Difference : EPL 2022 - 2023",
+                 title="Diferencia de goles : Bundesliga 2022 - 2023",
                  text=df.GD,
                  color=df.GD,
                  color_continuous_scale="ylgn",
@@ -127,14 +127,14 @@ def graphBubble(df):
                      y='xGA', 
                      size='xG', 
                      color='Squad',
-                     title="Team Efficiency: Chances Created Vs Chanced Conceded : Bundesliga 2022 - 2023",
+                     title="Eficiencia de clubes: oportunidades creadas Vs oportunidades concedidas: Bundesliga 2022 - 2023",
                      text=df['Squad'].str[:4],
                      height=600,
                     )
 
     fig.update_layout(
-        xaxis=dict(title='Expected Goals (xG): Every goal-scoring chance, and the likelihood of scoring'),
-        yaxis=dict(title='Expected Goals Against Team: (xGA)')
+        xaxis=dict(title='Expected Goals (xG): Ocasiones de gol y probabilidad de convertir'),
+        yaxis=dict(title='Expected Goals del rival: (xGA)')
     )
     st.plotly_chart(fig)
 
