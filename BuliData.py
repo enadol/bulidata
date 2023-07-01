@@ -30,7 +30,7 @@ fig = px.bar(df,
              color_continuous_scale="blues",
              height=600
             )
-st.show()
+st.show(fig)
 
 
 # In[4]:
@@ -46,7 +46,7 @@ fig = px.bar(df,
              text_auto=True,
              color_discrete_sequence=["gray","deepskyblue"]
             )
-st.show()
+st.show(fig)
 
 
 # In[5]:
@@ -62,7 +62,7 @@ fig = px.bar(df,
              color_continuous_scale="greens",
              height=600
             )
-st.show()
+st.show(fig)
 
 
 # In[6]:
@@ -79,7 +79,7 @@ fig = px.bar(df,
              title='Goals For, Goals Against : EPL 2022 - 2023',
              height=600
             )
-st.show()
+st.show(fig)
 
 
 # In[7]:
@@ -95,7 +95,7 @@ fig = px.bar(df,
              color_continuous_scale="ylgn",
              height=600
             )
-st.show()
+st.show(fig)
 
 
 # In[8]:
@@ -111,7 +111,7 @@ fig = px.bar(df,
              text_auto=True,
              height=600
             )
-st.show()
+st.show(fig)
 
 
 # In[9]:
@@ -132,7 +132,7 @@ fig.update_layout(
     xaxis=dict(title='Expected Goals (xG): Every goal-scoring chance, and the likelihood of scoring'),
     yaxis=dict(title='Expected Goals Against Team: (xGA)')
 )
-st.show()
+st.show(fig)
 
 
 # In[10]:
@@ -152,7 +152,7 @@ fig = px.bar(df,
                  height=600
             )
 
-st.show()
+st.show(fig)
 
 
 # In[ ]:
