@@ -171,7 +171,7 @@ elif selected_plot == "Puntos":
 
 elif selected_plot == "Público":
    st.write("Público en el estadio:")
-    graphStadiums(df)
+   graphStadiums(df)
 
 elif selected_plot == "Goles":
     st.write("Goles a favor y en contra:")
