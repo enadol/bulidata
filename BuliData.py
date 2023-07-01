@@ -18,9 +18,9 @@ df = pd.read_csv("results2022-2023201_overall.csv")
 df.Attendance = df.Attendance.str.replace(',', '').astype(int)
 
 with col1:
-    st.header("Visualizations")
+    col1.header("Visualizations")
     plot_options = ["Posiciones", "Puntos", "Público", "Goles", "Diff. Goles", "Partidos", "xG", "Goleadores"]
-    selected_plot = st.sidebar.selectbox("Seleccione un gráfico", plot_options)
+    selected_plot = col1.sidebar.selectbox("Seleccione un gráfico", plot_options)
 
 # In[4]:
 def graphPositions(df):
