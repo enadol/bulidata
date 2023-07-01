@@ -12,7 +12,7 @@ import streamlit as st
 col1, col2=st.columns(2)
 
 # In[3]:
-st.title("VISUAL DATA BUNDESLIGA 2022/2023")
+
 
 df = pd.read_csv("results2022-2023201_overall.csv")
 df.Attendance = df.Attendance.str.replace(',', '').astype(int)
@@ -164,7 +164,7 @@ def graphTopScorer(df):
 
 # In[ ]:
 with col2:
-    
+    st.title("VISUAL DATA BUNDESLIGA 2022/2023")
     if selected_plot == "Posiciones":
         #st.write("Gráfico de posiciones:")
         graphPositions(df)
